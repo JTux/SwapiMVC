@@ -1,7 +1,7 @@
 using System.Net.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Controllers
+namespace SwapiMVC.Controllers
 {
     public class PeopleController : Controller
     {
