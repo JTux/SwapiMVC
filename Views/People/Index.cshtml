@@ -1,6 +1,7 @@
 @model ResultsViewModel<PeopleViewModel>
 @{
     ViewData["Title"] = "People";
+    var currentPage = this.Context.Request.Query["page"].ToString() ?? "1";
 }
 
 <h1 class="text-center">People Index</h1>
@@ -11,7 +12,7 @@
         @foreach (var person in Model.Results)
         {
             <div class="item-container">
-                <a asp-action="Person" asp-route-id="@person.Id" class="item">
+                <a asp-action="Person" asp-route-id="@person.Id" asp-route-returnToPage="@currentPage" class="item">
                     <h4>@person.Name</h4>
                     <div class="item-traits">
                         <p>Mass: @person.Mass</p>

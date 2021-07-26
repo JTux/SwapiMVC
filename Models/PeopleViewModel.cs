@@ -18,6 +18,18 @@ namespace SwapiMVC.Models
         [JsonPropertyName("birth_year")]
         public string BirthYear { get; set; }
 
+        [JsonPropertyName("eye_color")]
+        public string EyeColor { get; set; }
+
+        [JsonPropertyName("hair_color")]
+        public string HairColor { get; set; }
+
+        [JsonPropertyName("gender")]
+        public string Gender { get; set; }
+
+        [JsonPropertyName("skin_color")]
+        public string SkinColor { get; set; }
+
         [JsonPropertyName("url")]
         public string Url { get; set; }
 

@@ -28,6 +28,11 @@ namespace SwapiMVC
                 client.BaseAddress = new Uri("https://swapi.dev/api/");
             });
 
+            services.AddHttpClient("bing", client => {
+                client.BaseAddress = new Uri("https://api.bing.microsoft.com/v7.0/images/");
+                client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", Configuration["imgKey"]);
+            });
+
             services.AddControllersWithViews();
         }
 

@@ -1,0 +1,11 @@
+@model Models.BingImageViewModel
+
+<div class="col-4 p-2 d-flex">
+    <section class="item p-4 text-center flex-grow-1 m-0">
+        <h3>Image</h3>
+        <hr />
+        <div class="row m-0 pt-3 justify-content-between">
+            <img src="@Model.Value.Url" alt="@Model.Value.Name" class="w-100">
+        </div>
+    </section>
+</div>
