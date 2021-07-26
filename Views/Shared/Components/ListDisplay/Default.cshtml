@@ -1,0 +1,17 @@
+@model Views.Shared.Components.ListDisplay.ListDisplayViewModel
+
+<div class="col-6 p-2 d-flex">
+    <section class="item p-4 text-center flex-grow-1">
+        <h3>@Model.Title Details (@Model.Data.Count())</h3>
+        <hr />
+        <div class="row m-0 pt-3 justify-content-between">
+            @foreach (var item in Model.Data.OrderBy(d => d.Name))
+            {
+                <div class="p-2">
+                    <a asp-action="details" asp-controller="@Model.Controller" asp-route-id="@item.Id" class="btn btn-outline-dark">@item.Name</a>
+                    @* <p>@item.Name</p> *@
+                </div>
+            }
+        </div>
+    </section>
+</div>

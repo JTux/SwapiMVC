@@ -30,5 +30,14 @@ namespace SwapiMVC.Models
                     .LastOrDefault();
             }
         }
+
+        [JsonPropertyName("starships")]
+        public string[] Starships { get; set; }
+
+        [JsonPropertyName("species")]
+        public string[] Species { get; set; }
+
+        [JsonPropertyName("vehicles")]
+        public string[] Vehicles { get; set; }
     }
 }
